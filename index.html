@@ -1,0 +1,683 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="description" content="[PLACEHOLDER: 1–2 sentence description for SEO]" />
+  <title>[YOUR NAME] — Research + Industry</title>
+
+  <style>
+    :root{
+      --bg:#0b0d12;
+      --card:#121620;
+      --text:#e7eaf0;
+      --muted:#aeb6c6;
+      --line:#242b3a;
+      --accent:#6ea8fe;
+      --accent2:#7ee787;
+      --shadow: 0 10px 30px rgba(0,0,0,.35);
+      --radius: 18px;
+      --max: 1100px;
+      --mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+      --sans: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
+    }
+
+    *{ box-sizing:border-box; }
+    html{ scroll-behavior:smooth; }
+    body{
+      margin:0;
+      font-family:var(--sans);
+      background: radial-gradient(1200px 800px at 70% -10%, rgba(110,168,254,.25), transparent 55%),
+                  radial-gradient(1000px 700px at 20% 0%, rgba(126,231,135,.16), transparent 60%),
+                  var(--bg);
+      color:var(--text);
+      line-height:1.6;
+    }
+
+    a{ color:inherit; text-decoration:none; }
+    a:hover{ text-decoration:underline; }
+
+    .container{ max-width:var(--max); margin:0 auto; padding:0 20px; }
+    .pill{
+      display:inline-flex; align-items:center; gap:8px;
+      padding:8px 12px; border:1px solid var(--line);
+      border-radius:999px; background: rgba(255,255,255,.02);
+      color:var(--muted); font-size:14px;
+    }
+
+    /* Header */
+    header{
+      position:sticky; top:0; z-index:50;
+      backdrop-filter: blur(14px);
+      background: rgba(11,13,18,.55);
+      border-bottom:1px solid rgba(36,43,58,.8);
+    }
+    .nav{
+      display:flex; align-items:center; justify-content:space-between;
+      padding:14px 0;
+      gap:16px;
+    }
+    .brand{
+      display:flex; align-items:baseline; gap:10px;
+      white-space:nowrap;
+    }
+    .brand strong{ font-size:16px; letter-spacing:.2px; }
+    .brand span{ font-size:12px; color:var(--muted); font-family:var(--mono); }
+
+    .navlinks{
+      display:flex; align-items:center; gap:14px; flex-wrap:wrap;
+      justify-content:flex-end;
+    }
+    .navlinks a{
+      color:var(--muted);
+      font-size:14px;
+      padding:8px 10px;
+      border-radius:10px;
+    }
+    .navlinks a:hover{
+      background: rgba(255,255,255,.04);
+      color:var(--text);
+      text-decoration:none;
+    }
+    .cta{
+      background: linear-gradient(135deg, rgba(110,168,254,.18), rgba(126,231,135,.14));
+      border:1px solid rgba(110,168,254,.35);
+      color:var(--text) !important;
+    }
+
+    /* Sections */
+    section{ padding:72px 0; }
+    .section-title{
+      display:flex; align-items:baseline; justify-content:space-between; gap:18px;
+      margin-bottom:18px;
+    }
+    h2{
+      margin:0;
+      font-size:22px;
+      letter-spacing:.2px;
+    }
+    .section-desc{
+      color:var(--muted);
+      max-width:70ch;
+      margin:0 0 20px 0;
+    }
+
+    /* Hero */
+    .hero{ padding:80px 0 54px 0; }
+    .hero-grid{
+      display:grid;
+      grid-template-columns: 1.2fr .8fr;
+      gap:22px;
+      align-items:start;
+    }
+    .hero h1{
+      margin:12px 0 10px 0;
+      font-size:42px;
+      line-height:1.15;
+      letter-spacing:-.4px;
+    }
+    .hero p{
+      margin:0 0 18px 0;
+      color:var(--muted);
+      font-size:16px;
+      max-width:70ch;
+    }
+    .actions{ display:flex; gap:12px; flex-wrap:wrap; margin-top:18px; }
+    .btn{
+      display:inline-flex; align-items:center; justify-content:center;
+      padding:10px 14px;
+      border-radius:12px;
+      border:1px solid var(--line);
+      background: rgba(255,255,255,.03);
+      color:var(--text);
+      font-size:14px;
+      text-decoration:none;
+      box-shadow: none;
+    }
+    .btn:hover{ background: rgba(255,255,255,.06); text-decoration:none; }
+    .btn.primary{
+      border-color: rgba(110,168,254,.45);
+      background: rgba(110,168,254,.12);
+    }
+    .btn.primary:hover{ background: rgba(110,168,254,.18); }
+    .btn.ghost{ color:var(--muted); }
+
+    .card{
+      background: rgba(18,22,32,.92);
+      border:1px solid rgba(36,43,58,.85);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+    }
+    .hero-side{
+      padding:18px;
+    }
+    .hero-side h3{
+      margin:0 0 8px 0; font-size:14px; color:var(--muted); font-weight:600;
+      letter-spacing:.3px; text-transform:uppercase;
+    }
+    .metrics{
+      display:grid; grid-template-columns:1fr 1fr; gap:12px;
+      margin-top:10px;
+    }
+    .metric{
+      padding:12px;
+      border:1px solid rgba(36,43,58,.75);
+      border-radius:14px;
+      background: rgba(255,255,255,.02);
+    }
+    .metric strong{ display:block; font-size:18px; }
+    .metric span{ color:var(--muted); font-size:13px; }
+
+    /* Grids */
+    .grid-3{
+      display:grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap:14px;
+      margin-top:18px;
+    }
+    .grid-2{
+      display:grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap:14px;
+      margin-top:18px;
+    }
+
+    .tile{ padding:16px; }
+    .tile h3{ margin:0 0 8px 0; font-size:16px; }
+    .tile p{ margin:0; color:var(--muted); font-size:14px; }
+
+    .tags{ margin-top:10px; display:flex; gap:8px; flex-wrap:wrap; }
+    .tag{
+      font-size:12px;
+      color:var(--muted);
+      border:1px solid rgba(36,43,58,.85);
+      background: rgba(255,255,255,.02);
+      padding:4px 8px;
+      border-radius:999px;
+      font-family:var(--mono);
+    }
+
+    /* Publication list */
+    .pubs{ display:flex; flex-direction:column; gap:12px; margin-top:14px; }
+    .pub{
+      padding:16px;
+      display:flex;
+      gap:12px;
+      align-items:flex-start;
+      justify-content:space-between;
+    }
+    .pub-left{ flex:1; min-width:0; }
+    .pub-title{ margin:0 0 6px 0; font-size:15px; }
+    .pub-meta{ margin:0; color:var(--muted); font-size:13px; }
+    .pub-links{ display:flex; gap:10px; flex-wrap:wrap; justify-content:flex-end; }
+    .pub-links a{ color:var(--muted); font-size:13px; border-bottom:1px dashed transparent; }
+    .pub-links a:hover{ color:var(--text); border-bottom-color:rgba(231,234,240,.35); text-decoration:none; }
+
+    /* Contact */
+    .contact-grid{
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      gap:14px;
+      margin-top:18px;
+    }
+    .contact-box{ padding:16px; }
+    .contact-box p{ margin:0; color:var(--muted); }
+    .mono{ font-family:var(--mono); }
+
+    /* Footer */
+    footer{
+      padding:34px 0;
+      border-top:1px solid rgba(36,43,58,.85);
+      color:var(--muted);
+      font-size:13px;
+    }
+    .footer-grid{
+      display:flex; justify-content:space-between; gap:14px; flex-wrap:wrap;
+      align-items:center;
+    }
+
+    /* Responsive */
+    @media (max-width: 920px){
+      .hero-grid{ grid-template-columns:1fr; }
+      .grid-3{ grid-template-columns:1fr; }
+      .grid-2{ grid-template-columns:1fr; }
+      .contact-grid{ grid-template-columns:1fr; }
+      .hero h1{ font-size:34px; }
+    }
+  </style>
+</head>
+
+<body>
+<header>
+  <div class="container">
+    <div class="nav">
+      <a class="brand" href="#top">
+        <strong>[YOUR NAME]</strong>
+        <span>[ROLE TAGLINE: e.g., Quantum + ML]</span>
+      </a>
+
+      <nav class="navlinks" aria-label="Primary navigation">
+        <a href="#about">About</a>
+        <a href="#research">Research</a>
+        <a href="#projects">Projects</a>
+        <a href="#publications">Publications</a>
+        <a href="#industry">Industry</a>
+        <a href="#teaching">Teaching</a>
+        <a href="#writing">Writing</a>
+        <a class="cta" href="[LINK_TO_CV_PDF]" target="_blank" rel="noopener">Download CV</a>
+      </nav>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="container">
+      <span class="pill">[PLACEHOLDER: Affiliation] · [PLACEHOLDER: Location] · <span class="mono">[PLACEHOLDER: Open to roles]</span></span>
+
+      <div class="hero-grid">
+        <div>
+          <h1>[PLACEHOLDER: Headline: Research + Industry Hybrid]</h1>
+          <p>
+            [PLACEHOLDER: 2–3 sentences. Say what you do, what you build, and what outcomes you care about.
+            Keep it readable to non-specialists while still precise.]
+          </p>
+
+          <div class="actions">
+            <a class="btn primary" href="#projects">View Projects</a>
+            <a class="btn" href="#research">Research Themes</a>
+            <a class="btn ghost" href="#contact">Contact</a>
+          </div>
+
+          <div class="tags" style="margin-top:18px;">
+            <span class="tag">[TAG: Quantum Info]</span>
+            <span class="tag">[TAG: ML]</span>
+            <span class="tag">[TAG: Theory → Practice]</span>
+            <span class="tag">[TAG: Python]</span>
+            <span class="tag">[TAG: Papers + Code]</span>
+          </div>
+        </div>
+
+        <aside class="card hero-side">
+          <h3>Highlights</h3>
+          <div class="metrics">
+            <div class="metric">
+              <strong>[#]</strong>
+              <span>[PLACEHOLDER: Publications / Preprints]</span>
+            </div>
+            <div class="metric">
+              <strong>[#]</strong>
+              <span>[PLACEHOLDER: Talks / Workshops]</span>
+            </div>
+            <div class="metric">
+              <strong>[#]</strong>
+              <span>[PLACEHOLDER: Projects / Demos]</span>
+            </div>
+            <div class="metric">
+              <strong>[#]</strong>
+              <span>[PLACEHOLDER: Years experience / domain]</span>
+            </div>
+          </div>
+
+          <div style="margin-top:14px;">
+            <h3>Links</h3>
+            <div class="pub-links" style="justify-content:flex-start;">
+              <a href="[LINKEDIN_URL]" target="_blank" rel="noopener">LinkedIn</a>
+              <a href="[GITHUB_URL]" target="_blank" rel="noopener">GitHub</a>
+              <a href="[SCHOLAR_URL]" target="_blank" rel="noopener">Google Scholar</a>
+              <a href="[ORCID_URL]" target="_blank" rel="noopener">ORCID</a>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHAT I DO -->
+  <section>
+    <div class="container">
+      <div class="section-title">
+        <h2>What I do</h2>
+      </div>
+      <p class="section-desc">
+        [PLACEHOLDER: 1–2 lines describing your “bridge”: rigorous theory + deployable systems.]
+      </p>
+
+      <div class="grid-3">
+        <div class="card tile">
+          <h3>Research (theory)</h3>
+          <p>[PLACEHOLDER: Themes: contextuality, stabilizer codes, cohomology, etc.]</p>
+          <div class="tags">
+            <span class="tag">[TAG]</span><span class="tag">[TAG]</span><span class="tag">[TAG]</span>
+          </div>
+        </div>
+
+        <div class="card tile">
+          <h3>Algorithms & ML (applied)</h3>
+          <p>[PLACEHOLDER: ML focus: representation learning, scientific ML, compression, etc.]</p>
+          <div class="tags">
+            <span class="tag">[TAG]</span><span class="tag">[TAG]</span><span class="tag">[TAG]</span>
+          </div>
+        </div>
+
+        <div class="card tile">
+          <h3>Engineering (execution)</h3>
+          <p>[PLACEHOLDER: reproducibility, experiments, open-source, collaboration.]</p>
+          <div class="tags">
+            <span class="tag">[TAG]</span><span class="tag">[TAG]</span><span class="tag">[TAG]</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="container">
+      <div class="section-title">
+        <h2>About</h2>
+      </div>
+      <p class="section-desc">
+        [PLACEHOLDER: short narrative. 5–7 lines max. Mention current role, PhD, and what you’re building next.]
+      </p>
+
+      <div class="grid-2">
+        <div class="card tile">
+          <h3>Now</h3>
+          <p>[PLACEHOLDER: Current position, group, focus areas, collaboration style.]</p>
+        </div>
+        <div class="card tile">
+          <h3>Looking for</h3>
+          <p>[PLACEHOLDER: roles, domains, what problems you want to solve, what environment you thrive in.]</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- RESEARCH -->
+  <section id="research">
+    <div class="container">
+      <div class="section-title">
+        <h2>Research themes</h2>
+      </div>
+      <p class="section-desc">
+        [PLACEHOLDER: 1–2 lines. Make themes legible to non-specialists; each should hint at “why it matters.”]
+      </p>
+
+      <div class="grid-3">
+        <div class="card tile">
+          <h3>[Theme 1 title]</h3>
+          <p>[PLACEHOLDER: 3–4 bullet-like sentences. Include a “why it matters.”]</p>
+        </div>
+        <div class="card tile">
+          <h3>[Theme 2 title]</h3>
+          <p>[PLACEHOLDER]</p>
+        </div>
+        <div class="card tile">
+          <h3>[Theme 3 title]</h3>
+          <p>[PLACEHOLDER]</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects">
+    <div class="container">
+      <div class="section-title">
+        <h2>Selected projects</h2>
+      </div>
+      <p class="section-desc">
+        [PLACEHOLDER: brief framing. You can say “case-study style” and that each has code/results.]
+      </p>
+
+      <div class="grid-2">
+        <div class="card tile">
+          <h3>[Project A title]</h3>
+          <p>[Problem → approach → result (ideally with a number).]</p>
+          <div class="tags">
+            <span class="tag">[Python]</span>
+            <span class="tag">[Framework]</span>
+            <span class="tag">[Domain]</span>
+          </div>
+          <div class="actions" style="margin-top:12px;">
+            <a class="btn" href="[PROJECT_A_CASE_STUDY_LINK]">Case Study</a>
+            <a class="btn" href="[PROJECT_A_REPO_LINK]" target="_blank" rel="noopener">Repo</a>
+          </div>
+        </div>
+
+        <div class="card tile">
+          <h3>[Project B title]</h3>
+          <p>[PLACEHOLDER]</p>
+          <div class="tags">
+            <span class="tag">[TAG]</span>
+            <span class="tag">[TAG]</span>
+            <span class="tag">[TAG]</span>
+          </div>
+          <div class="actions" style="margin-top:12px;">
+            <a class="btn" href="[PROJECT_B_CASE_STUDY_LINK]">Case Study</a>
+            <a class="btn" href="[PROJECT_B_REPO_LINK]" target="_blank" rel="noopener">Repo</a>
+          </div>
+        </div>
+
+        <div class="card tile">
+          <h3>[Project C title]</h3>
+          <p>[PLACEHOLDER]</p>
+          <div class="tags">
+            <span class="tag">[TAG]</span>
+            <span class="tag">[TAG]</span>
+            <span class="tag">[TAG]</span>
+          </div>
+          <div class="actions" style="margin-top:12px;">
+            <a class="btn" href="[PROJECT_C_CASE_STUDY_LINK]">Case Study</a>
+            <a class="btn" href="[PROJECT_C_REPO_LINK]" target="_blank" rel="noopener">Repo</a>
+          </div>
+        </div>
+
+        <div class="card tile">
+          <h3>[Project D title]</h3>
+          <p>[PLACEHOLDER]</p>
+          <div class="tags">
+            <span class="tag">[TAG]</span>
+            <span class="tag">[TAG]</span>
+            <span class="tag">[TAG]</span>
+          </div>
+          <div class="actions" style="margin-top:12px;">
+            <a class="btn" href="[PROJECT_D_CASE_STUDY_LINK]">Case Study</a>
+            <a class="btn" href="[PROJECT_D_REPO_LINK]" target="_blank" rel="noopener">Repo</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PUBLICATIONS -->
+  <section id="publications">
+    <div class="container">
+      <div class="section-title">
+        <h2>Publications</h2>
+      </div>
+      <p class="section-desc">
+        [PLACEHOLDER: Split into peer-reviewed + preprints if you want. Keep “selected” here; link to full list.]
+      </p>
+
+      <div class="pubs">
+        <div class="card pub">
+          <div class="pub-left">
+            <p class="pub-title"><strong>[Paper title]</strong></p>
+            <p class="pub-meta">[Authors]. <em>[Venue / Year]</em>. [One-line contribution/impact.]</p>
+          </div>
+          <div class="pub-links">
+            <a href="[PDF_LINK]" target="_blank" rel="noopener">PDF</a>
+            <a href="[ARXIV_LINK]" target="_blank" rel="noopener">arXiv</a>
+            <a href="[CODE_LINK]" target="_blank" rel="noopener">Code</a>
+            <a href="[SLIDES_LINK]" target="_blank" rel="noopener">Slides</a>
+          </div>
+        </div>
+
+        <div class="card pub">
+          <div class="pub-left">
+            <p class="pub-title"><strong>[Paper title]</strong></p>
+            <p class="pub-meta">[Authors]. <em>[Venue / Year]</em>. [One-line contribution/impact.]</p>
+          </div>
+          <div class="pub-links">
+            <a href="[PDF_LINK]" target="_blank" rel="noopener">PDF</a>
+            <a href="[ARXIV_LINK]" target="_blank" rel="noopener">arXiv</a>
+          </div>
+        </div>
+
+        <div class="card pub">
+          <div class="pub-left">
+            <p class="pub-title"><strong>[Paper title]</strong></p>
+            <p class="pub-meta">[Authors]. <em>[Venue / Year]</em>. [One-line contribution/impact.]</p>
+          </div>
+          <div class="pub-links">
+            <a href="[SCHOLAR_PROFILE_LINK]" target="_blank" rel="noopener">Full list</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- INDUSTRY -->
+  <section id="industry">
+    <div class="container">
+      <div class="section-title">
+        <h2>Industry & applied work</h2>
+      </div>
+      <p class="section-desc">
+        [PLACEHOLDER: Make this “outcome-focused” and readable: pipelines, systems, collaboration, metrics.]
+      </p>
+
+      <div class="grid-3">
+        <div class="card tile">
+          <h3>[Applied area 1]</h3>
+          <p>[PLACEHOLDER: what you built + impact + tools.]</p>
+        </div>
+        <div class="card tile">
+          <h3>[Applied area 2]</h3>
+          <p>[PLACEHOLDER]</p>
+        </div>
+        <div class="card tile">
+          <h3>[Applied area 3]</h3>
+          <p>[PLACEHOLDER]</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TEACHING / TALKS -->
+  <section id="teaching">
+    <div class="container">
+      <div class="section-title">
+        <h2>Teaching & talks</h2>
+      </div>
+      <p class="section-desc">
+        [PLACEHOLDER: quick summary. Then list 3–6 highlights.]
+      </p>
+
+      <div class="grid-2">
+        <div class="card tile">
+          <h3>Teaching</h3>
+          <p>
+            • [Course / Role] — [Institution] ([Year])<br/>
+            • [Course / Role] — [Institution] ([Year])<br/>
+            • [Course / Role] — [Institution] ([Year])
+          </p>
+        </div>
+
+        <div class="card tile">
+          <h3>Selected talks</h3>
+          <p>
+            • <strong>[Talk title]</strong> — [Venue], [Month Year] (<a href="[SLIDES_LINK]" target="_blank" rel="noopener">slides</a>)<br/>
+            • <strong>[Talk title]</strong> — [Venue], [Month Year] (<a href="[VIDEO_LINK]" target="_blank" rel="noopener">video</a>)<br/>
+            • <strong>[Talk title]</strong> — [Venue], [Month Year]
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WRITING -->
+  <section id="writing">
+    <div class="container">
+      <div class="section-title">
+        <h2>Writing</h2>
+      </div>
+      <p class="section-desc">
+        [PLACEHOLDER: Optional. Short technical notes, explainers, blog posts. Great for industry signal.]
+      </p>
+
+      <div class="grid-3">
+        <div class="card tile">
+          <h3><a href="[POST_LINK]">[Post title]</a></h3>
+          <p>[PLACEHOLDER: 1–2 lines about who it’s for and what it explains.]</p>
+          <div class="tags"><span class="tag">[TAG]</span><span class="tag">[TAG]</span></div>
+        </div>
+        <div class="card tile">
+          <h3><a href="[POST_LINK]">[Post title]</a></h3>
+          <p>[PLACEHOLDER]</p>
+          <div class="tags"><span class="tag">[TAG]</span><span class="tag">[TAG]</span></div>
+        </div>
+        <div class="card tile">
+          <h3><a href="[POST_LINK]">[Post title]</a></h3>
+          <p>[PLACEHOLDER]</p>
+          <div class="tags"><span class="tag">[TAG]</span><span class="tag">[TAG]</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <div class="container">
+      <div class="section-title">
+        <h2>Contact</h2>
+      </div>
+      <p class="section-desc">
+        [PLACEHOLDER: Short invitation. Mention what kinds of collaborations/roles you’re open to.]
+      </p>
+
+      <div class="contact-grid">
+        <div class="card contact-box">
+          <h3 style="margin:0 0 8px 0;">Email</h3>
+          <p class="mono"><a href="mailto:[YOUR_EMAIL]">[YOUR_EMAIL]</a></p>
+          <p style="margin-top:10px;">[PLACEHOLDER: Location / timezone / availability.]</p>
+        </div>
+
+        <div class="card contact-box">
+          <h3 style="margin:0 0 8px 0;">Links</h3>
+          <p>
+            <a href="[LINKEDIN_URL]" target="_blank" rel="noopener">LinkedIn</a><br/>
+            <a href="[GITHUB_URL]" target="_blank" rel="noopener">GitHub</a><br/>
+            <a href="[SCHOLAR_URL]" target="_blank" rel="noopener">Google Scholar</a><br/>
+            <a href="[CALENDLY_OR_MEETING_LINK]" target="_blank" rel="noopener">Meeting link</a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div>© <span id="year"></span> [YOUR NAME]. [PLACEHOLDER: short footer note.]</div>
+      <div class="pub-links">
+        <a href="#top">Back to top</a>
+        <a href="[LINK_TO_CV_PDF]" target="_blank" rel="noopener">CV</a>
+        <a href="[GITHUB_URL]" target="_blank" rel="noopener">GitHub</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>
