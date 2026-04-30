@@ -1,683 +1,671 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <meta name="description" content="[PLACEHOLDER: 1–2 sentence description for SEO]" />
-  <title>[YOUR NAME] — Research + Industry</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Santanil Jana - Mathematics PhD, quantum computing researcher, and machine learning scientist." />
+  <title>Santanil Jana | Research & Machine Learning Portfolio</title>
 
   <style>
-    :root{
-      --bg:#0b0d12;
-      --card:#121620;
-      --text:#e7eaf0;
-      --muted:#aeb6c6;
-      --line:#242b3a;
-      --accent:#6ea8fe;
-      --accent2:#7ee787;
-      --shadow: 0 10px 30px rgba(0,0,0,.35);
-      --radius: 18px;
-      --max: 1100px;
-      --mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
-      --sans: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
+    :root {
+      --bg: #f8fafc;
+      --card: #ffffff;
+      --text: #0f172a;
+      --muted: #475569;
+      --soft: #e2e8f0;
+      --accent: #111827;
+      --accent-soft: #f1f5f9;
+      --link: #2563eb;
+      --shadow: 0 18px 45px rgba(15, 23, 42, 0.08);
+      --radius: 22px;
+      --max-width: 1120px;
     }
 
-    *{ box-sizing:border-box; }
-    html{ scroll-behavior:smooth; }
-    body{
-      margin:0;
-      font-family:var(--sans);
-      background: radial-gradient(1200px 800px at 70% -10%, rgba(110,168,254,.25), transparent 55%),
-                  radial-gradient(1000px 700px at 20% 0%, rgba(126,231,135,.16), transparent 60%),
-                  var(--bg);
-      color:var(--text);
-      line-height:1.6;
+    * {
+      box-sizing: border-box;
     }
 
-    a{ color:inherit; text-decoration:none; }
-    a:hover{ text-decoration:underline; }
-
-    .container{ max-width:var(--max); margin:0 auto; padding:0 20px; }
-    .pill{
-      display:inline-flex; align-items:center; gap:8px;
-      padding:8px 12px; border:1px solid var(--line);
-      border-radius:999px; background: rgba(255,255,255,.02);
-      color:var(--muted); font-size:14px;
+    html {
+      scroll-behavior: smooth;
     }
 
-    /* Header */
-    header{
-      position:sticky; top:0; z-index:50;
+    body {
+      margin: 0;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color: var(--text);
+      background:
+        radial-gradient(circle at top left, #e0f2fe 0, transparent 32%),
+        radial-gradient(circle at top right, #f1f5f9 0, transparent 30%),
+        linear-gradient(180deg, #f8fafc 0%, #ffffff 45%, #f8fafc 100%);
+      line-height: 1.6;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    a:hover {
+      color: var(--link);
+    }
+
+    .container {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      background: rgba(255, 255, 255, 0.86);
       backdrop-filter: blur(14px);
-      background: rgba(11,13,18,.55);
-      border-bottom:1px solid rgba(36,43,58,.8);
-    }
-    .nav{
-      display:flex; align-items:center; justify-content:space-between;
-      padding:14px 0;
-      gap:16px;
-    }
-    .brand{
-      display:flex; align-items:baseline; gap:10px;
-      white-space:nowrap;
-    }
-    .brand strong{ font-size:16px; letter-spacing:.2px; }
-    .brand span{ font-size:12px; color:var(--muted); font-family:var(--mono); }
-
-    .navlinks{
-      display:flex; align-items:center; gap:14px; flex-wrap:wrap;
-      justify-content:flex-end;
-    }
-    .navlinks a{
-      color:var(--muted);
-      font-size:14px;
-      padding:8px 10px;
-      border-radius:10px;
-    }
-    .navlinks a:hover{
-      background: rgba(255,255,255,.04);
-      color:var(--text);
-      text-decoration:none;
-    }
-    .cta{
-      background: linear-gradient(135deg, rgba(110,168,254,.18), rgba(126,231,135,.14));
-      border:1px solid rgba(110,168,254,.35);
-      color:var(--text) !important;
+      border-bottom: 1px solid var(--soft);
     }
 
-    /* Sections */
-    section{ padding:72px 0; }
-    .section-title{
-      display:flex; align-items:baseline; justify-content:space-between; gap:18px;
-      margin-bottom:18px;
-    }
-    h2{
-      margin:0;
-      font-size:22px;
-      letter-spacing:.2px;
-    }
-    .section-desc{
-      color:var(--muted);
-      max-width:70ch;
-      margin:0 0 20px 0;
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      min-height: 72px;
     }
 
-    /* Hero */
-    .hero{ padding:80px 0 54px 0; }
-    .hero-grid{
-      display:grid;
-      grid-template-columns: 1.2fr .8fr;
-      gap:22px;
-      align-items:start;
+    .brand {
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      color: var(--text);
     }
-    .hero h1{
-      margin:12px 0 10px 0;
-      font-size:42px;
-      line-height:1.15;
-      letter-spacing:-.4px;
-    }
-    .hero p{
-      margin:0 0 18px 0;
-      color:var(--muted);
-      font-size:16px;
-      max-width:70ch;
-    }
-    .actions{ display:flex; gap:12px; flex-wrap:wrap; margin-top:18px; }
-    .btn{
-      display:inline-flex; align-items:center; justify-content:center;
-      padding:10px 14px;
-      border-radius:12px;
-      border:1px solid var(--line);
-      background: rgba(255,255,255,.03);
-      color:var(--text);
-      font-size:14px;
-      text-decoration:none;
-      box-shadow: none;
-    }
-    .btn:hover{ background: rgba(255,255,255,.06); text-decoration:none; }
-    .btn.primary{
-      border-color: rgba(110,168,254,.45);
-      background: rgba(110,168,254,.12);
-    }
-    .btn.primary:hover{ background: rgba(110,168,254,.18); }
-    .btn.ghost{ color:var(--muted); }
 
-    .card{
-      background: rgba(18,22,32,.92);
-      border:1px solid rgba(36,43,58,.85);
+    .nav-links {
+      display: flex;
+      gap: 24px;
+      font-size: 0.95rem;
+      color: var(--muted);
+    }
+
+    .hero {
+      padding: 92px 0 72px;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.35fr 0.65fr;
+      gap: 42px;
+      align-items: center;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      padding: 8px 14px;
+      border: 1px solid var(--soft);
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.8);
+      color: var(--muted);
+      font-size: 0.95rem;
+      box-shadow: 0 8px 24px rgba(15, 23, 42, 0.04);
+    }
+
+    h1 {
+      margin: 22px 0 18px;
+      font-size: clamp(3rem, 8vw, 5.8rem);
+      line-height: 0.95;
+      letter-spacing: -0.075em;
+    }
+
+    .hero p {
+      max-width: 780px;
+      color: var(--muted);
+      font-size: 1.25rem;
+    }
+
+    .button-row {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+      margin-top: 30px;
+    }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 13px 18px;
+      border-radius: 16px;
+      border: 1px solid var(--soft);
+      font-weight: 700;
+      transition: transform 0.18s ease, box-shadow 0.18s ease, background 0.18s ease;
+    }
+
+    .button:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 10px 26px rgba(15, 23, 42, 0.10);
+      color: inherit;
+    }
+
+    .button.primary {
+      background: var(--accent);
+      color: white;
+      border-color: var(--accent);
+    }
+
+    .button.secondary {
+      background: white;
+      color: var(--text);
+    }
+
+    .contact-line {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      margin-top: 28px;
+      color: var(--muted);
+      font-size: 0.98rem;
+    }
+
+    .profile-card,
+    .card {
+      background: rgba(255, 255, 255, 0.9);
+      border: 1px solid var(--soft);
       border-radius: var(--radius);
       box-shadow: var(--shadow);
     }
-    .hero-side{
-      padding:18px;
-    }
-    .hero-side h3{
-      margin:0 0 8px 0; font-size:14px; color:var(--muted); font-weight:600;
-      letter-spacing:.3px; text-transform:uppercase;
-    }
-    .metrics{
-      display:grid; grid-template-columns:1fr 1fr; gap:12px;
-      margin-top:10px;
-    }
-    .metric{
-      padding:12px;
-      border:1px solid rgba(36,43,58,.75);
-      border-radius:14px;
-      background: rgba(255,255,255,.02);
-    }
-    .metric strong{ display:block; font-size:18px; }
-    .metric span{ color:var(--muted); font-size:13px; }
 
-    /* Grids */
-    .grid-3{
-      display:grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap:14px;
-      margin-top:18px;
-    }
-    .grid-2{
-      display:grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap:14px;
-      margin-top:18px;
+    .profile-card {
+      padding: 26px;
     }
 
-    .tile{ padding:16px; }
-    .tile h3{ margin:0 0 8px 0; font-size:16px; }
-    .tile p{ margin:0; color:var(--muted); font-size:14px; }
-
-    .tags{ margin-top:10px; display:flex; gap:8px; flex-wrap:wrap; }
-    .tag{
-      font-size:12px;
-      color:var(--muted);
-      border:1px solid rgba(36,43,58,.85);
-      background: rgba(255,255,255,.02);
-      padding:4px 8px;
-      border-radius:999px;
-      font-family:var(--mono);
+    .profile-card h2 {
+      margin-top: 0;
+      font-size: 1.35rem;
     }
 
-    /* Publication list */
-    .pubs{ display:flex; flex-direction:column; gap:12px; margin-top:14px; }
-    .pub{
-      padding:16px;
-      display:flex;
-      gap:12px;
-      align-items:flex-start;
-      justify-content:space-between;
-    }
-    .pub-left{ flex:1; min-width:0; }
-    .pub-title{ margin:0 0 6px 0; font-size:15px; }
-    .pub-meta{ margin:0; color:var(--muted); font-size:13px; }
-    .pub-links{ display:flex; gap:10px; flex-wrap:wrap; justify-content:flex-end; }
-    .pub-links a{ color:var(--muted); font-size:13px; border-bottom:1px dashed transparent; }
-    .pub-links a:hover{ color:var(--text); border-bottom-color:rgba(231,234,240,.35); text-decoration:none; }
-
-    /* Contact */
-    .contact-grid{
-      display:grid;
-      grid-template-columns: 1fr 1fr;
-      gap:14px;
-      margin-top:18px;
-    }
-    .contact-box{ padding:16px; }
-    .contact-box p{ margin:0; color:var(--muted); }
-    .mono{ font-family:var(--mono); }
-
-    /* Footer */
-    footer{
-      padding:34px 0;
-      border-top:1px solid rgba(36,43,58,.85);
-      color:var(--muted);
-      font-size:13px;
-    }
-    .footer-grid{
-      display:flex; justify-content:space-between; gap:14px; flex-wrap:wrap;
-      align-items:center;
+    .profile-list {
+      display: grid;
+      gap: 16px;
+      padding: 0;
+      margin: 0;
+      list-style: none;
+      color: var(--muted);
     }
 
-    /* Responsive */
-    @media (max-width: 920px){
-      .hero-grid{ grid-template-columns:1fr; }
-      .grid-3{ grid-template-columns:1fr; }
-      .grid-2{ grid-template-columns:1fr; }
-      .contact-grid{ grid-template-columns:1fr; }
-      .hero h1{ font-size:34px; }
+    section {
+      padding: 70px 0;
+      scroll-margin-top: 90px;
+    }
+
+    .section-heading {
+      margin-bottom: 28px;
+    }
+
+    .section-heading h2 {
+      font-size: clamp(2rem, 4vw, 3rem);
+      line-height: 1.05;
+      margin: 0 0 12px;
+      letter-spacing: -0.05em;
+    }
+
+    .section-heading p {
+      max-width: 760px;
+      color: var(--muted);
+      font-size: 1.08rem;
+      margin: 0;
+    }
+
+    .grid-2 {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 22px;
+    }
+
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+    .card {
+      padding: 26px;
+    }
+
+    .card h3 {
+      margin: 0 0 8px;
+      font-size: 1.45rem;
+      letter-spacing: -0.025em;
+    }
+
+    .card .meta {
+      color: var(--muted);
+      margin: 0 0 16px;
+    }
+
+    .card p {
+      color: var(--muted);
+    }
+
+    ul.clean {
+      padding-left: 0;
+      list-style: none;
+      margin: 18px 0 0;
+    }
+
+    ul.clean li {
+      position: relative;
+      padding-left: 22px;
+      margin: 10px 0;
+      color: var(--muted);
+    }
+
+    ul.clean li::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0.75em;
+      width: 7px;
+      height: 7px;
+      border-radius: 999px;
+      background: var(--accent);
+    }
+
+    .project-list {
+      display: grid;
+      gap: 22px;
+    }
+
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 18px;
+    }
+
+    .tag {
+      display: inline-flex;
+      padding: 6px 10px;
+      border-radius: 999px;
+      border: 1px solid var(--soft);
+      background: var(--accent-soft);
+      color: #334155;
+      font-size: 0.9rem;
+    }
+
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+    .skill-block {
+      border: 1px solid var(--soft);
+      border-radius: 18px;
+      padding: 18px;
+      background: white;
+    }
+
+    .skill-block h3 {
+      font-size: 1.05rem;
+      margin: 0 0 8px;
+    }
+
+    .skill-block p {
+      margin: 0;
+      color: var(--muted);
+    }
+
+    .pub-list {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      display: grid;
+      gap: 14px;
+    }
+
+    .pub-list li {
+      display: grid;
+      grid-template-columns: 38px 1fr;
+      gap: 14px;
+      align-items: start;
+      color: var(--muted);
+    }
+
+    .pub-number {
+      width: 34px;
+      height: 34px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 999px;
+      background: var(--accent-soft);
+      color: var(--text);
+      font-weight: 800;
+      font-size: 0.9rem;
+    }
+
+    .contact-card {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 14px;
+    }
+
+    .contact-item {
+      border: 1px solid var(--soft);
+      border-radius: 18px;
+      padding: 18px;
+      background: white;
+      color: var(--muted);
+      font-weight: 700;
+    }
+
+    footer {
+      padding: 38px 0;
+      border-top: 1px solid var(--soft);
+      color: var(--muted);
+      text-align: center;
+      font-size: 0.95rem;
+    }
+
+    @media (max-width: 860px) {
+      .hero-grid,
+      .grid-2,
+      .grid-3,
+      .skills-grid,
+      .contact-card {
+        grid-template-columns: 1fr;
+      }
+
+      .nav {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 14px;
+        padding: 16px 0;
+      }
+
+      .nav-links {
+        flex-wrap: wrap;
+        gap: 12px 18px;
+      }
+
+      .hero {
+        padding-top: 62px;
+      }
     }
   </style>
 </head>
 
 <body>
-<header>
-  <div class="container">
-    <div class="nav">
-      <a class="brand" href="#top">
-        <strong>[YOUR NAME]</strong>
-        <span>[ROLE TAGLINE: e.g., Quantum + ML]</span>
-      </a>
-
-      <nav class="navlinks" aria-label="Primary navigation">
-        <a href="#about">About</a>
+  <header>
+    <div class="container nav">
+      <a class="brand" href="#home">Santanil Jana</a>
+      <nav class="nav-links" aria-label="Main navigation">
         <a href="#research">Research</a>
-        <a href="#projects">Projects</a>
+        <a href="#ai-ml">AI + ML</a>
         <a href="#publications">Publications</a>
-        <a href="#industry">Industry</a>
-        <a href="#teaching">Teaching</a>
-        <a href="#writing">Writing</a>
-        <a class="cta" href="[LINK_TO_CV_PDF]" target="_blank" rel="noopener">Download CV</a>
+        <a href="#experience">Experience</a>
+        <a href="#contact">Contact</a>
       </nav>
     </div>
-  </div>
-</header>
+  </header>
 
-<main id="top">
-
-  <!-- HERO -->
-  <section class="hero">
-    <div class="container">
-      <span class="pill">[PLACEHOLDER: Affiliation] · [PLACEHOLDER: Location] · <span class="mono">[PLACEHOLDER: Open to roles]</span></span>
-
-      <div class="hero-grid">
+  <main id="home">
+    <section class="hero">
+      <div class="container hero-grid">
         <div>
-          <h1>[PLACEHOLDER: Headline: Research + Industry Hybrid]</h1>
+          <span class="eyebrow">Mathematics PhD · Quantum Computing Researcher · Machine Learning Scientist</span>
+          <h1>Santanil Jana</h1>
           <p>
-            [PLACEHOLDER: 2–3 sentences. Say what you do, what you build, and what outcomes you care about.
-            Keep it readable to non-specialists while still precise.]
+            I work at the intersection of quantum computing, algebraic topology, graph-based inference, and machine learning.
+            My research focuses on turning deep mathematical structure into scalable computational methods for high-dimensional scientific problems.
           </p>
 
-          <div class="actions">
-            <a class="btn primary" href="#projects">View Projects</a>
-            <a class="btn" href="#research">Research Themes</a>
-            <a class="btn ghost" href="#contact">Contact</a>
+          <div class="button-row">
+            <a class="button primary" href="#research">View Research</a>
+            <a class="button secondary" href="#ai-ml">AI + ML Projects</a>
           </div>
 
-          <div class="tags" style="margin-top:18px;">
-            <span class="tag">[TAG: Quantum Info]</span>
-            <span class="tag">[TAG: ML]</span>
-            <span class="tag">[TAG: Theory → Practice]</span>
-            <span class="tag">[TAG: Python]</span>
-            <span class="tag">[TAG: Papers + Code]</span>
+          <div class="contact-line">
+            <span>Vancouver, BC</span>
+            <a href="mailto:santanil.jana@gmail.com">santanil.jana@gmail.com</a>
+            <a href="#">LinkedIn</a>
+            <a href="#">GitHub</a>
           </div>
         </div>
 
-        <aside class="card hero-side">
-          <h3>Highlights</h3>
-          <div class="metrics">
-            <div class="metric">
-              <strong>[#]</strong>
-              <span>[PLACEHOLDER: Publications / Preprints]</span>
-            </div>
-            <div class="metric">
-              <strong>[#]</strong>
-              <span>[PLACEHOLDER: Talks / Workshops]</span>
-            </div>
-            <div class="metric">
-              <strong>[#]</strong>
-              <span>[PLACEHOLDER: Projects / Demos]</span>
-            </div>
-            <div class="metric">
-              <strong>[#]</strong>
-              <span>[PLACEHOLDER: Years experience / domain]</span>
-            </div>
-          </div>
-
-          <div style="margin-top:14px;">
-            <h3>Links</h3>
-            <div class="pub-links" style="justify-content:flex-start;">
-              <a href="[LINKEDIN_URL]" target="_blank" rel="noopener">LinkedIn</a>
-              <a href="[GITHUB_URL]" target="_blank" rel="noopener">GitHub</a>
-              <a href="[SCHOLAR_URL]" target="_blank" rel="noopener">Google Scholar</a>
-              <a href="[ORCID_URL]" target="_blank" rel="noopener">ORCID</a>
-            </div>
-          </div>
+        <aside class="profile-card">
+          <h2>Profile</h2>
+          <ul class="profile-list">
+            <li><strong>Current role:</strong> Postdoctoral Research Scientist in quantum computing at Simon Fraser University.</li>
+            <li><strong>Training:</strong> PhD in Mathematics from the University of British Columbia.</li>
+            <li><strong>Technical focus:</strong> Python, PyTorch, Scikit-Learn, TensorFlow/Keras, SQL, graph algorithms, Transformers, and statistical learning.</li>
+            <li><strong>Applied ML:</strong> LLM hallucination detection, tensorized CNNs, NLP pipelines, predictive modeling, and scientific data analysis.</li>
+          </ul>
         </aside>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- WHAT I DO -->
-  <section>
-    <div class="container">
-      <div class="section-title">
-        <h2>What I do</h2>
-      </div>
-      <p class="section-desc">
-        [PLACEHOLDER: 1–2 lines describing your “bridge”: rigorous theory + deployable systems.]
-      </p>
-
-      <div class="grid-3">
-        <div class="card tile">
-          <h3>Research (theory)</h3>
-          <p>[PLACEHOLDER: Themes: contextuality, stabilizer codes, cohomology, etc.]</p>
-          <div class="tags">
-            <span class="tag">[TAG]</span><span class="tag">[TAG]</span><span class="tag">[TAG]</span>
-          </div>
-        </div>
-
-        <div class="card tile">
-          <h3>Algorithms & ML (applied)</h3>
-          <p>[PLACEHOLDER: ML focus: representation learning, scientific ML, compression, etc.]</p>
-          <div class="tags">
-            <span class="tag">[TAG]</span><span class="tag">[TAG]</span><span class="tag">[TAG]</span>
-          </div>
-        </div>
-
-        <div class="card tile">
-          <h3>Engineering (execution)</h3>
-          <p>[PLACEHOLDER: reproducibility, experiments, open-source, collaboration.]</p>
-          <div class="tags">
-            <span class="tag">[TAG]</span><span class="tag">[TAG]</span><span class="tag">[TAG]</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ABOUT -->
-  <section id="about">
-    <div class="container">
-      <div class="section-title">
-        <h2>About</h2>
-      </div>
-      <p class="section-desc">
-        [PLACEHOLDER: short narrative. 5–7 lines max. Mention current role, PhD, and what you’re building next.]
-      </p>
-
-      <div class="grid-2">
-        <div class="card tile">
-          <h3>Now</h3>
-          <p>[PLACEHOLDER: Current position, group, focus areas, collaboration style.]</p>
-        </div>
-        <div class="card tile">
-          <h3>Looking for</h3>
-          <p>[PLACEHOLDER: roles, domains, what problems you want to solve, what environment you thrive in.]</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- RESEARCH -->
-  <section id="research">
-    <div class="container">
-      <div class="section-title">
-        <h2>Research themes</h2>
-      </div>
-      <p class="section-desc">
-        [PLACEHOLDER: 1–2 lines. Make themes legible to non-specialists; each should hint at “why it matters.”]
-      </p>
-
-      <div class="grid-3">
-        <div class="card tile">
-          <h3>[Theme 1 title]</h3>
-          <p>[PLACEHOLDER: 3–4 bullet-like sentences. Include a “why it matters.”]</p>
-        </div>
-        <div class="card tile">
-          <h3>[Theme 2 title]</h3>
-          <p>[PLACEHOLDER]</p>
-        </div>
-        <div class="card tile">
-          <h3>[Theme 3 title]</h3>
-          <p>[PLACEHOLDER]</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- PROJECTS -->
-  <section id="projects">
-    <div class="container">
-      <div class="section-title">
-        <h2>Selected projects</h2>
-      </div>
-      <p class="section-desc">
-        [PLACEHOLDER: brief framing. You can say “case-study style” and that each has code/results.]
-      </p>
-
-      <div class="grid-2">
-        <div class="card tile">
-          <h3>[Project A title]</h3>
-          <p>[Problem → approach → result (ideally with a number).]</p>
-          <div class="tags">
-            <span class="tag">[Python]</span>
-            <span class="tag">[Framework]</span>
-            <span class="tag">[Domain]</span>
-          </div>
-          <div class="actions" style="margin-top:12px;">
-            <a class="btn" href="[PROJECT_A_CASE_STUDY_LINK]">Case Study</a>
-            <a class="btn" href="[PROJECT_A_REPO_LINK]" target="_blank" rel="noopener">Repo</a>
-          </div>
-        </div>
-
-        <div class="card tile">
-          <h3>[Project B title]</h3>
-          <p>[PLACEHOLDER]</p>
-          <div class="tags">
-            <span class="tag">[TAG]</span>
-            <span class="tag">[TAG]</span>
-            <span class="tag">[TAG]</span>
-          </div>
-          <div class="actions" style="margin-top:12px;">
-            <a class="btn" href="[PROJECT_B_CASE_STUDY_LINK]">Case Study</a>
-            <a class="btn" href="[PROJECT_B_REPO_LINK]" target="_blank" rel="noopener">Repo</a>
-          </div>
-        </div>
-
-        <div class="card tile">
-          <h3>[Project C title]</h3>
-          <p>[PLACEHOLDER]</p>
-          <div class="tags">
-            <span class="tag">[TAG]</span>
-            <span class="tag">[TAG]</span>
-            <span class="tag">[TAG]</span>
-          </div>
-          <div class="actions" style="margin-top:12px;">
-            <a class="btn" href="[PROJECT_C_CASE_STUDY_LINK]">Case Study</a>
-            <a class="btn" href="[PROJECT_C_REPO_LINK]" target="_blank" rel="noopener">Repo</a>
-          </div>
-        </div>
-
-        <div class="card tile">
-          <h3>[Project D title]</h3>
-          <p>[PLACEHOLDER]</p>
-          <div class="tags">
-            <span class="tag">[TAG]</span>
-            <span class="tag">[TAG]</span>
-            <span class="tag">[TAG]</span>
-          </div>
-          <div class="actions" style="margin-top:12px;">
-            <a class="btn" href="[PROJECT_D_CASE_STUDY_LINK]">Case Study</a>
-            <a class="btn" href="[PROJECT_D_REPO_LINK]" target="_blank" rel="noopener">Repo</a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- PUBLICATIONS -->
-  <section id="publications">
-    <div class="container">
-      <div class="section-title">
-        <h2>Publications</h2>
-      </div>
-      <p class="section-desc">
-        [PLACEHOLDER: Split into peer-reviewed + preprints if you want. Keep “selected” here; link to full list.]
-      </p>
-
-      <div class="pubs">
-        <div class="card pub">
-          <div class="pub-left">
-            <p class="pub-title"><strong>[Paper title]</strong></p>
-            <p class="pub-meta">[Authors]. <em>[Venue / Year]</em>. [One-line contribution/impact.]</p>
-          </div>
-          <div class="pub-links">
-            <a href="[PDF_LINK]" target="_blank" rel="noopener">PDF</a>
-            <a href="[ARXIV_LINK]" target="_blank" rel="noopener">arXiv</a>
-            <a href="[CODE_LINK]" target="_blank" rel="noopener">Code</a>
-            <a href="[SLIDES_LINK]" target="_blank" rel="noopener">Slides</a>
-          </div>
-        </div>
-
-        <div class="card pub">
-          <div class="pub-left">
-            <p class="pub-title"><strong>[Paper title]</strong></p>
-            <p class="pub-meta">[Authors]. <em>[Venue / Year]</em>. [One-line contribution/impact.]</p>
-          </div>
-          <div class="pub-links">
-            <a href="[PDF_LINK]" target="_blank" rel="noopener">PDF</a>
-            <a href="[ARXIV_LINK]" target="_blank" rel="noopener">arXiv</a>
-          </div>
-        </div>
-
-        <div class="card pub">
-          <div class="pub-left">
-            <p class="pub-title"><strong>[Paper title]</strong></p>
-            <p class="pub-meta">[Authors]. <em>[Venue / Year]</em>. [One-line contribution/impact.]</p>
-          </div>
-          <div class="pub-links">
-            <a href="[SCHOLAR_PROFILE_LINK]" target="_blank" rel="noopener">Full list</a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- INDUSTRY -->
-  <section id="industry">
-    <div class="container">
-      <div class="section-title">
-        <h2>Industry & applied work</h2>
-      </div>
-      <p class="section-desc">
-        [PLACEHOLDER: Make this “outcome-focused” and readable: pipelines, systems, collaboration, metrics.]
-      </p>
-
-      <div class="grid-3">
-        <div class="card tile">
-          <h3>[Applied area 1]</h3>
-          <p>[PLACEHOLDER: what you built + impact + tools.]</p>
-        </div>
-        <div class="card tile">
-          <h3>[Applied area 2]</h3>
-          <p>[PLACEHOLDER]</p>
-        </div>
-        <div class="card tile">
-          <h3>[Applied area 3]</h3>
-          <p>[PLACEHOLDER]</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- TEACHING / TALKS -->
-  <section id="teaching">
-    <div class="container">
-      <div class="section-title">
-        <h2>Teaching & talks</h2>
-      </div>
-      <p class="section-desc">
-        [PLACEHOLDER: quick summary. Then list 3–6 highlights.]
-      </p>
-
-      <div class="grid-2">
-        <div class="card tile">
-          <h3>Teaching</h3>
+    <section id="research">
+      <div class="container">
+        <div class="section-heading">
+          <h2>Research</h2>
           <p>
-            • [Course / Role] — [Institution] ([Year])<br/>
-            • [Course / Role] — [Institution] ([Year])<br/>
-            • [Course / Role] — [Institution] ([Year])
+            My research combines pure mathematics, quantum information, and computational methods, with a focus on structure,
+            classification, and scalable inference.
           </p>
         </div>
 
-        <div class="card tile">
-          <h3>Selected talks</h3>
+        <div class="grid-2">
+          <article class="card">
+            <h3>Algebraic Topology</h3>
+            <p>
+              My PhD research focused on algebraic topology, especially cohomological methods related to flag manifolds,
+              unordered flag varieties, and group actions. This work develops structural tools for understanding cohomology rings
+              and related algebraic invariants.
+            </p>
+            <ul class="clean">
+              <li>Cohomology of complete unordered flag manifolds.</li>
+              <li>Mod-2 cohomology rings of alternating subgroups of Coxeter groups of Type B.</li>
+              <li>Connections between group cohomology, topology, and combinatorial algebra.</li>
+              <li>Publications in Transactions of the AMS, Topology and its Applications, and Homology, Homotopy and Applications.</li>
+            </ul>
+          </article>
+
+          <article class="card">
+            <h3>Quantum Computing</h3>
+            <p>
+              As a postdoctoral researcher, I study quantum nonlocality, contextuality, and magic state distillation through
+              algebraic, graph-theoretic, and computational techniques.
+            </p>
+            <ul class="clean">
+              <li>Developed graph-based frameworks for modeling quantum nonlocality as constraint satisfaction problems.</li>
+              <li>Evaluated 1,000+ instances and improved paradox detection efficiency by roughly 40% using odd-cycle inference.</li>
+              <li>Developed invariant-theoretic methods for magic state distillation, scaling analysis to codes up to 71 qubits / 41 qutrits.</li>
+              <li>Identified high-threshold protocols with approximately 32%–34% noise tolerance.</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="ai-ml">
+      <div class="container">
+        <div class="section-heading">
+          <h2>AI + Machine Learning</h2>
           <p>
-            • <strong>[Talk title]</strong> — [Venue], [Month Year] (<a href="[SLIDES_LINK]" target="_blank" rel="noopener">slides</a>)<br/>
-            • <strong>[Talk title]</strong> — [Venue], [Month Year] (<a href="[VIDEO_LINK]" target="_blank" rel="noopener">video</a>)<br/>
-            • <strong>[Talk title]</strong> — [Venue], [Month Year]
+            Applied machine learning projects spanning LLM evaluation, deep learning compression, NLP, predictive modeling,
+            and data-driven infrastructure analysis.
           </p>
         </div>
-      </div>
-    </div>
-  </section>
 
-  <!-- WRITING -->
-  <section id="writing">
-    <div class="container">
-      <div class="section-title">
-        <h2>Writing</h2>
-      </div>
-      <p class="section-desc">
-        [PLACEHOLDER: Optional. Short technical notes, explainers, blog posts. Great for industry signal.]
-      </p>
+        <div class="project-list">
+          <article class="card">
+            <h3>LLM Hallucination Detector</h3>
+            <p class="meta">Erdős Institute Data Science Boot Camp · Spring 2026</p>
+            <ul class="clean">
+              <li>Built a hallucination detection framework for Transformer-based generative models using Python, PyTorch, and Scikit-Learn.</li>
+              <li>Engineered white-box and black-box features from attention-head Laplacians and sampled response clouds.</li>
+              <li>Achieved 0.91 AUROC across 2,500 queries and five benchmark datasets, supporting a pre-validation layer for risky LLM outputs.</li>
+            </ul>
+            <div class="tags">
+              <span class="tag">Transformers</span>
+              <span class="tag">PyTorch</span>
+              <span class="tag">LLMs</span>
+              <span class="tag">Model Evaluation</span>
+              <span class="tag">Scikit-Learn</span>
+            </div>
+          </article>
 
-      <div class="grid-3">
-        <div class="card tile">
-          <h3><a href="[POST_LINK]">[Post title]</a></h3>
-          <p>[PLACEHOLDER: 1–2 lines about who it’s for and what it explains.]</p>
-          <div class="tags"><span class="tag">[TAG]</span><span class="tag">[TAG]</span></div>
+          <article class="card">
+            <h3>Tensorized CNNs for Amazon Deforestation Analysis</h3>
+            <p class="meta">Multiverse Computing via PIMS M2PI · Summer 2023</p>
+            <ul class="clean">
+              <li>Replaced ResNet50 with Tensorized CNN architectures to reduce model size by approximately 90%.</li>
+              <li>Achieved roughly 10x reduction in FLOPs while maintaining comparable predictive performance.</li>
+              <li>Analyzed around 5,000 high-dimensional images using TensorFlow/Keras and reduced training time by approximately 40%.</li>
+            </ul>
+            <div class="tags">
+              <span class="tag">Deep Learning</span>
+              <span class="tag">Tensorized CNNs</span>
+              <span class="tag">Computer Vision</span>
+              <span class="tag">TensorFlow</span>
+              <span class="tag">Keras</span>
+            </div>
+          </article>
+
+          <article class="card">
+            <h3>NLP and Predictive Analytics at IOTO International</h3>
+            <p class="meta">Data Scientist Internship · 2022</p>
+            <ul class="clean">
+              <li>Engineered NLP pipelines over 50,000+ unstructured text records using Scikit-Learn and Pandas.</li>
+              <li>Improved classification accuracy by approximately 25% and reduced preprocessing time by approximately 40%.</li>
+              <li>Queried 1M+ structured rows using SQL and Python, building predictive models that improved key business metrics by approximately 15%–20%.</li>
+            </ul>
+            <div class="tags">
+              <span class="tag">NLP</span>
+              <span class="tag">SQL</span>
+              <span class="tag">Pandas</span>
+              <span class="tag">Predictive Modeling</span>
+              <span class="tag">Data Science</span>
+            </div>
+          </article>
+
+          <article class="card">
+            <h3>EV Charger Capacity and Grid Infrastructure Optimization</h3>
+            <p class="meta">Awesense via PIMS M2PI · Summer 2022</p>
+            <ul class="clean">
+              <li>Processed and curated large-scale grid data using SQL and Python, reducing data inconsistencies by approximately 20%.</li>
+              <li>Engineered predictive features for capacity modeling and infrastructure planning.</li>
+              <li>Developed a real-time data pipeline interfacing with the Awesense API to simulate 100+ grid stress scenarios.</li>
+            </ul>
+            <div class="tags">
+              <span class="tag">API Integration</span>
+              <span class="tag">Simulation</span>
+              <span class="tag">SQL</span>
+              <span class="tag">Scikit-Learn</span>
+              <span class="tag">Infrastructure Analytics</span>
+            </div>
+          </article>
         </div>
-        <div class="card tile">
-          <h3><a href="[POST_LINK]">[Post title]</a></h3>
-          <p>[PLACEHOLDER]</p>
-          <div class="tags"><span class="tag">[TAG]</span><span class="tag">[TAG]</span></div>
+      </div>
+    </section>
+
+    <section id="skills">
+      <div class="container">
+        <div class="section-heading">
+          <h2>Skills</h2>
+          <p>Technical strengths across machine learning, scientific computing, and mathematical research.</p>
         </div>
-        <div class="card tile">
-          <h3><a href="[POST_LINK]">[Post title]</a></h3>
-          <p>[PLACEHOLDER]</p>
-          <div class="tags"><span class="tag">[TAG]</span><span class="tag">[TAG]</span></div>
+
+        <div class="skills-grid">
+          <div class="skill-block">
+            <h3>Programming & Tools</h3>
+            <p>Python, PyTorch, NumPy, Pandas, SciPy, Scikit-Learn, TensorFlow/Keras, SQL, Git, R, Mathematica, Magma.</p>
+          </div>
+          <div class="skill-block">
+            <h3>Machine Learning</h3>
+            <p>Transformers, LLMs, CNNs, representation learning, regularized regression, classification, clustering, statistical learning, model evaluation.</p>
+          </div>
+          <div class="skill-block">
+            <h3>Scientific Computing</h3>
+            <p>Graph algorithms, constraint satisfaction, uncertainty-aware validation, high-dimensional analysis, mathematical modeling, experimental design.</p>
+          </div>
+          <div class="skill-block">
+            <h3>Research Areas</h3>
+            <p>Quantum computing, quantum nonlocality, magic state distillation, algebraic topology, group cohomology, graph theory.</p>
+          </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- CONTACT -->
-  <section id="contact">
-    <div class="container">
-      <div class="section-title">
-        <h2>Contact</h2>
-      </div>
-      <p class="section-desc">
-        [PLACEHOLDER: Short invitation. Mention what kinds of collaborations/roles you’re open to.]
-      </p>
-
-      <div class="contact-grid">
-        <div class="card contact-box">
-          <h3 style="margin:0 0 8px 0;">Email</h3>
-          <p class="mono"><a href="mailto:[YOUR_EMAIL]">[YOUR_EMAIL]</a></p>
-          <p style="margin-top:10px;">[PLACEHOLDER: Location / timezone / availability.]</p>
+    <section id="publications">
+      <div class="container">
+        <div class="section-heading">
+          <h2>Publications</h2>
+          <p>Selected publications and preprints across algebraic topology, quantum information, and mathematical physics.</p>
         </div>
 
-        <div class="card contact-box">
-          <h3 style="margin:0 0 8px 0;">Links</h3>
+        <article class="card">
+          <ol class="pub-list">
+            <li><span class="pub-number">1</span><span>High-threshold magic state distillation with quantum quadratic residue codes, Preprint, 2026.</span></li>
+            <li><span class="pub-number">2</span><span>Three-qubit nonlocality paradoxes: beyond GHZ, Preprint, 2026.</span></li>
+            <li><span class="pub-number">3</span><span>A Classification Program for Nonlocality Paradoxes of Three Qubits, Proceedings of Quantum Physics and Logic, 2025.</span></li>
+            <li><span class="pub-number">4</span><span>Cohomology of Complete Unordered Flag Manifolds, Transactions of the American Mathematical Society, 2025.</span></li>
+            <li><span class="pub-number">5</span><span>Mod-2 Cohomology of Unordered Flag Varieties in Lower Orders and Auerbach Bases, Topology and its Applications, 2025.</span></li>
+            <li><span class="pub-number">6</span><span>The mod 2 cohomology rings of the alternating subgroups of the Coxeter groups of Type B, Homology, Homotopy and Applications, 2026.</span></li>
+          </ol>
+        </article>
+      </div>
+    </section>
+
+    <section id="experience">
+      <div class="container">
+        <div class="section-heading">
+          <h2>Experience</h2>
+          <p>Research, applied data science, and scientific computing experience.</p>
+        </div>
+
+        <div class="grid-2">
+          <article class="card">
+            <h3>Simon Fraser University</h3>
+            <p class="meta">Postdoctoral Research Scientist · 2023–Present · Burnaby, BC</p>
+            <p>
+              Conduct research in quantum computing, graph-based nonlocality, contextuality, and magic state distillation.
+              Develop computational frameworks for classifying structured quantum phenomena and evaluating high-dimensional scientific models.
+            </p>
+          </article>
+
+          <article class="card">
+            <h3>IOTO International</h3>
+            <p class="meta">Data Scientist Intern · 2022 · Vancouver, BC</p>
+            <p>
+              Built NLP and predictive analytics pipelines using Python, SQL, Pandas, and Scikit-Learn. Delivered data-driven insights
+              through classification models, automated reporting, and executive-facing analysis.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="container">
+        <div class="section-heading">
+          <h2>Contact</h2>
           <p>
-            <a href="[LINKEDIN_URL]" target="_blank" rel="noopener">LinkedIn</a><br/>
-            <a href="[GITHUB_URL]" target="_blank" rel="noopener">GitHub</a><br/>
-            <a href="[SCHOLAR_URL]" target="_blank" rel="noopener">Google Scholar</a><br/>
-            <a href="[CALENDLY_OR_MEETING_LINK]" target="_blank" rel="noopener">Meeting link</a>
+            I am interested in machine learning research, scientific AI, quantum computing, and data-driven approaches to complex scientific problems.
           </p>
         </div>
+
+        <article class="card contact-card">
+          <a class="contact-item" href="mailto:santanil.jana@gmail.com">Email</a>
+          <a class="contact-item" href="#">LinkedIn</a>
+          <a class="contact-item" href="#">GitHub</a>
+        </article>
       </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      © 2026 Santanil Jana. Research and machine learning portfolio.
     </div>
-  </section>
-
-</main>
-
-<footer>
-  <div class="container">
-    <div class="footer-grid">
-      <div>© <span id="year"></span> [YOUR NAME]. [PLACEHOLDER: short footer note.]</div>
-      <div class="pub-links">
-        <a href="#top">Back to top</a>
-        <a href="[LINK_TO_CV_PDF]" target="_blank" rel="noopener">CV</a>
-        <a href="[GITHUB_URL]" target="_blank" rel="noopener">GitHub</a>
-      </div>
-    </div>
-  </div>
-</footer>
-
-<script>
-  document.getElementById("year").textContent = new Date().getFullYear();
-</script>
-
+  </footer>
 </body>
 </html>
