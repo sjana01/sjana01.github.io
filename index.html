@@ -389,6 +389,25 @@
         padding-top: 62px;
       }
     }
+  .arxiv-link {
+    color: #2563eb;
+    font-weight: 600;
+    text-decoration: none;
+  }
+
+  .arxiv-link:hover {
+    text-decoration: underline;
+  }
+
+  a {
+  color: #2563eb;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
   </style>
 </head>
 
@@ -431,6 +450,7 @@
         </div>
 
         <aside class="profile-card">
+          <img src="profile.jpg" alt="Photo of Santanil Jana" class="profile-photo">
           <h2>Profile</h2>
           <ul class="profile-list">
             <li><strong>Current role:</strong> Postdoctoral Research Scientist in quantum computing at Simon Fraser University.</li>
@@ -454,20 +474,6 @@
 
         <div class="grid-2">
           <article class="card">
-            <h3>Algebraic Topology</h3>
-            <p>
-              My PhD research focused on algebraic topology, especially cohomological methods related to flag manifolds,
-              unordered flag varieties, and group actions. This work develops structural tools for understanding cohomology rings
-              and related algebraic invariants.
-            </p>
-            <ul class="clean">
-              <li>Cohomology of complete unordered flag manifolds.</li>
-              <li>Mod-2 cohomology rings of alternating subgroups of Coxeter groups of Type B.</li>
-              <li>Connections between group cohomology, topology, and combinatorial algebra.</li>
-            </ul>
-          </article>
-
-          <article class="card">
             <h3>Quantum Computing</h3>
             <p>
               As a postdoctoral researcher, I study quantum nonlocality, contextuality, and magic state distillation through
@@ -477,7 +483,19 @@
               <li>Developed graph-based frameworks for modeling quantum nonlocality as constraint satisfaction problems.</li>
               <li>Classified three-qubit nonlocality paradoxes beyond the GHZ scenario, identifying new families of paradoxes and their algebraic structure.</li>
               <li>Developed invariant-theoretic methods for magic state distillation, scaling analysis to codes up to 71 qubits / 41 qutrits.</li>
-              <li>Identified high-threshold protocols with approximately 32%–34% noise tolerance.</li>
+            </ul>
+          </article>
+          <article class="card">
+            <h3>Algebraic Topology</h3>
+            <p>
+              My PhD research focused on algebraic topology, especially cohomological methods related to 
+              unordered flag manifolds and symmetric group actions. This work develops structural tools for understanding cohomology rings of unordered flag manifolds
+              and related algebraic invariants. For more on this research, see my <a href="https://open.library.ubc.ca/soa/cIRcle/collections/ubctheses/24/items/1.0437127" target="_blank" rel="noopener noreferrer">PhD Thesis</a>.
+            </p>
+            <ul class="clean">
+              <li>Cohomology of complete unordered flag manifolds.</li>
+              <li>Mod-2 cohomology rings of alternating subgroups of Coxeter groups of Type B.</li>
+              <li>Connections between group cohomology, topology, and combinatorial algebra.</li>
             </ul>
           </article>
         </div>
@@ -496,12 +514,10 @@
 
         <div class="project-list">
           <article class="card">
-            <h3>LLM Hallucination Detector</h3>
+            <h3> <a href="https://www.erdosinstitute.org/certificates/spring-2026/data-science-boot-camp/santanil-jana/d9e93799-13b0-4a73-a969-55bb37771917" target="_blank" rel="noopener noreferrer">LLM Hallucination Detector</a></h3>
             <p class="meta">Erdős Institute Data Science Boot Camp · Spring 2026</p>
             <ul class="clean">
-              <li>Built a hallucination detection framework for Transformer-based generative models using Python, PyTorch, and Scikit-Learn.</li>
-              <li>Engineered white-box and black-box features from attention-head Laplacians and sampled response clouds.</li>
-              <li>Achieved 0.91 AUROC across 2,500 queries and five benchmark datasets, supporting a pre-validation layer for risky LLM outputs.</li>
+              We built a hallucination detection framework for Transformer-based generative models using Python, PyTorch, and Scikit-Learn. The project combined white-box and black-box signals by extracting spectral features from attention-head Laplacians and geometric features from sampled response clouds. Across 2,500 queries and five benchmark datasets, the framework achieved 0.91 AUROC and served as a lightweight pre-validation layer for identifying risky LLM outputs before downstream verification.
             </ul>
             <div class="tags">
               <span class="tag">Transformers</span>
@@ -516,9 +532,7 @@
             <h3>Tensorized CNNs for Amazon Deforestation Analysis</h3>
             <p class="meta">Multiverse Computing via PIMS M2PI · Summer 2023</p>
             <ul class="clean">
-              <li>Replaced ResNet50 with Tensorized CNN architectures to reduce model size by approximately 90%.</li>
-              <li>Achieved roughly 10x reduction in FLOPs while maintaining comparable predictive performance.</li>
-              <li>Analyzed around 5,000 high-dimensional images using TensorFlow/Keras and reduced training time by approximately 40%.</li>
+              We optimized a deep learning pipeline for Amazon deforestation analysis by replacing ResNet50 with Tensorized CNN architectures, reducing the model size by approximately 90%. This approach achieved roughly a 10x reduction in FLOPs while maintaining comparable predictive performance on high-dimensional image data. The project involved analyzing around 5,000 images using TensorFlow/Keras and reduced training time by approximately 40%.
             </ul>
             <div class="tags">
               <span class="tag">Deep Learning</span>
@@ -533,9 +547,7 @@
             <h3>NLP and Predictive Analytics at IOTO International</h3>
             <p class="meta">Data Scientist Internship · 2022</p>
             <ul class="clean">
-              <li>Engineered NLP pipelines over 50,000+ unstructured text records using Scikit-Learn and Pandas.</li>
-              <li>Improved classification accuracy by approximately 25% and reduced preprocessing time by approximately 40%.</li>
-              <li>Queried 1M+ structured rows using SQL and Python, building predictive models that improved key business metrics by approximately 15%–20%.</li>
+              I developed NLP pipelines over 50,000+ unstructured text records using Scikit-Learn and Pandas, improving classification accuracy by approximately 25% while reducing preprocessing time by approximately 40%. I also queried over 1M structured rows using SQL and Python, building predictive models that improved key business metrics by approximately 15%–20%.
             </ul>
             <div class="tags">
               <span class="tag">NLP</span>
@@ -550,9 +562,7 @@
             <h3>EV Charger Capacity and Grid Infrastructure Optimization</h3>
             <p class="meta">Awesense via PIMS M2PI · Summer 2022</p>
             <ul class="clean">
-              <li>Processed and curated large-scale grid data using SQL and Python, reducing data inconsistencies by approximately 20%.</li>
-              <li>Engineered predictive features for capacity modeling and infrastructure planning.</li>
-              <li>Developed a real-time data pipeline interfacing with the Awesense API to simulate 100+ grid stress scenarios.</li>
+              We processed and curated large-scale grid data using SQL and Python, reducing data inconsistencies by approximately 20% and engineering predictive features for capacity modeling and infrastructure planning. I also developed a real-time data pipeline interfacing with the Awesense API to simulate 100+ grid stress scenarios.
             </ul>
             <div class="tags">
               <span class="tag">API Integration</span>
@@ -594,62 +604,133 @@
       </div>
     </section>
 
-    <section id="publications">
-      <div class="container">
-        <div class="section-heading">
-          <h2>Publications</h2>
-          <p>Selected publications and preprints across algebraic topology, quantum information, and mathematical physics.</p>
-        </div>
+<article class="card">
+  <ol class="pub-list">
+    <li>
+      <span class="pub-number">1</span>
+      <span>
+        M. Zurel, <b>SJ</b>, N. de Silva.
+        High-threshold magic state distillation with quantum quadratic residue codes,
+        Preprint, 2026.
+        ePrint:
+        <a class="arxiv-link" href="https://arxiv.org/abs/2603.18560" target="_blank" rel="noopener noreferrer">
+          arXiv:2603.18560
+        </a>
+      </span>
+    </li>
 
-        <article class="card">
-          <ol class="pub-list">
-            <li><span class="pub-number">1</span><span>High-threshold magic state distillation with quantum quadratic residue codes, Preprint, 2026.</span></li>
-            <li><span class="pub-number">2</span><span>Three-qubit nonlocality paradoxes: beyond GHZ, Preprint, 2026.</span></li>
-            <li><span class="pub-number">3</span><span>A Classification Program for Nonlocality Paradoxes of Three Qubits, Proceedings of Quantum Physics and Logic, 2025.</span></li>
-            <li><span class="pub-number">4</span><span>Cohomology of Complete Unordered Flag Manifolds, Transactions of the American Mathematical Society, 2025.</span></li>
-            <li><span class="pub-number">5</span><span>Mod-2 Cohomology of Unordered Flag Varieties in Lower Orders and Auerbach Bases, Topology and its Applications, 2025.</span></li>
-            <li><span class="pub-number">6</span><span>The mod 2 cohomology rings of the alternating subgroups of the Coxeter groups of Type B, Homology, Homotopy and Applications, 2026.</span></li>
-          </ol>
-        </article>
-      </div>
-    </section>
+    <li>
+      <span class="pub-number">2</span>
+      <span>
+        N. de Silva, <b>SJ</b>, M. Yin.
+        Three-qubit nonlocality paradoxes: beyond GHZ,
+        Preprint, 2026.
+      </span>
+    </li>
+
+    <li>
+      <span class="pub-number">3</span>
+      <span>
+        N. de Silva, <b>SJ</b>, M. Yin.
+        A Classification Program for Nonlocality Paradoxes of Three Qubits,
+        Proceedings of Quantum Physics and Logic, 2025.
+        ePrint:
+        <a class="arxiv-link" href="https://arxiv.org/abs/2508.14673" target="_blank" rel="noopener noreferrer">
+          arXiv:2508.14673
+        </a>
+      </span>
+    </li>
+
+    <li>
+      <span class="pub-number">4</span>
+      <span>
+        L. Guerra, <b>SJ</b>.
+        Cohomology of Complete Unordered Flag Manifolds,
+        Transactions of the American Mathematical Society, 2025.
+        ePrint:
+        <a class="arxiv-link" href="https://arxiv.org/abs/2309.00429" target="_blank" rel="noopener noreferrer">
+          arXiv:2309.00429
+        </a>
+      </span>
+    </li>
+
+    <li>
+      <span class="pub-number">5</span>
+      <span>
+        L. Guerra, <b>SJ</b>, A. Maiti.
+        Mod-2 Cohomology of Unordered Flag Varieties in Lower Orders and Auerbach Bases,
+        Topology and its Applications, 2025.
+        ePrint:
+        <a class="arxiv-link" href="https://arxiv.org/abs/2304.12990" target="_blank" rel="noopener noreferrer">
+          arXiv:2304.12990
+        </a>
+      </span>
+    </li>
+
+    <li>
+      <span class="pub-number">6</span>
+      <span>
+        L. Guerra, <b>SJ</b>.
+        The mod 2 cohomology rings of the alternating subgroups of the Coxeter groups of Type B,
+        Homology, Homotopy and Applications, 2026.
+        ePrint:
+        <a class="arxiv-link" href="https://arxiv.org/abs/2312.12346" target="_blank" rel="noopener noreferrer">
+          arXiv:2312.12346
+        </a>
+      </span>
+    </li>
+
+    <li>
+      <span class="pub-number">7</span>
+      <span>
+        <b>SJ</b>.
+        On the Cohomology of the Total Space of Classifying Space for Commutativity in U(3),
+        2023.
+        ePrint:
+        <a class="arxiv-link" href="https://arxiv.org/abs/2106.09195" target="_blank" rel="noopener noreferrer">
+          arXiv:2106.09195
+        </a>
+      </span>
+    </li>
+  </ol>
+</article>
 
     <section id="experience">
-      <div class="container">
-        <div class="section-heading">
-          <h2>Experience</h2>
-          <p>Research, applied data science, and scientific computing experience.</p>
-        </div>
+  <div class="container">
+    <div class="section-heading">
+      <h2>Experience</h2>
+      <p>Quantum Computing Research, Data Science, and Scientific Computing Experience.</p>
+    </div>
 
-        <div class="grid-2">
-          <article class="card">
-            <h3>Simon Fraser University</h3>
-            <p class="meta">Postdoctoral Research Scientist · 2023–Present · Burnaby, BC</p>
-            <p>
-              Conduct research in quantum computing, graph-based nonlocality, contextuality, and magic state distillation.
-              Develop computational frameworks for classifying structured quantum phenomena and evaluating high-dimensional scientific models.
-            </p>
-          </article>
+    <div class="grid-2">
+      <article class="card">
+        <h3>Simon Fraser University</h3>
+        <p class="meta">Postdoctoral Research Scientist · 2023–Present · Burnaby, BC</p>
+        <p>
+          Working as a postdoctoral researcher under 
+  <a href="https://www.sfu.ca/~ndesilva/" target="_blank" rel="noopener noreferrer">Dr. Nadish de Silva</a>, 
+  Canada Research Chair in the Mathematics of Quantum Computation. 
+  Conduct research in quantum computing, with a focus on nonlocality, contextuality, and magic state distillation. 
+  Develop computational frameworks for classifying structured quantum phenomena and evaluating high-dimensional scientific models.
+        </p>
+      </article>
 
-          <article class="card">
-            <h3>IOTO International</h3>
-            <p class="meta">Data Scientist Intern · 2022 · Vancouver, BC</p>
-            <p>
-              Built NLP and predictive analytics pipelines using Python, SQL, Pandas, and Scikit-Learn. Delivered data-driven insights
-              through classification models, automated reporting, and executive-facing analysis.
-            </p>
-          </article>
-        </div>
-      </div>
-    </section>
+      <article class="card">
+        <h3>IOTO International</h3>
+        <p class="meta">Data Scientist Intern · 2022 · Vancouver, BC</p>
+        <p>
+          Built NLP and predictive analytics pipelines using Python, SQL, Pandas, and Scikit-Learn. Delivered data-driven insights
+          through classification models, automated reporting, and executive-facing analysis.
+        </p>
+      </article>
+    </div>
+  </div>
+</section>
 
     <section id="contact">
       <div class="container">
         <div class="section-heading">
           <h2>Contact</h2>
-          <p>
-            I am interested in machine learning research, scientific AI, quantum computing, and data-driven approaches to complex scientific problems.
-          </p>
         </div>
 
         <article class="card contact-card">
@@ -663,7 +744,7 @@
 
   <footer>
     <div class="container">
-      © 2026 Santanil Jana. Research and machine learning portfolio.
+      © 2026 Santanil Jana. All rights reserved.
     </div>
   </footer>
 </body>
